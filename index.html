@@ -176,12 +176,44 @@
         animation: fadeUp 820ms ease 380ms both;
       }
 
+      .hero-family {
+        display: inline-grid;
+        gap: 5px;
+        margin-top: 24px;
+        padding: 16px 18px;
+        border: 1px solid rgba(185, 99, 61, 0.24);
+        border-radius: 8px;
+        background: rgba(255, 250, 241, 0.72);
+        box-shadow: 0 16px 38px rgba(64, 52, 38, 0.1);
+        animation: fadeUp 820ms ease 450ms both;
+      }
+
+      .hero-family span {
+        color: var(--terracotta);
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero-family strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(25px, 4vw, 42px);
+        line-height: 1;
+      }
+
+      .hero-family p {
+        color: #45524d;
+        font-size: 16px;
+        line-height: 1.35;
+      }
+
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         margin-top: 34px;
-        animation: fadeUp 820ms ease 520ms both;
+        animation: fadeUp 820ms ease 600ms both;
       }
 
       .button {
@@ -585,6 +617,12 @@
           С радостью приглашаем вас разделить с нами светлый день первого шага нашей
           малышки. Пусть этот праздник пройдет в кругу родных, тепла и добрых пожеланий.
         </p>
+        <div class="hero-family" aria-label="Маалымат">
+          <span>Умар</span>
+          <strong>Жээнтек той</strong>
+          <p>Той ээси: Нурак, Нуриза</p>
+          <p>Нурак &amp; Нуриза</p>
+        </div>
         <div class="hero-actions">
           <a class="button primary" href="#details">Посмотреть детали</a>
           <a class="button" href="https://2gis.kg/bishkek/geo/70030076701835419/72.075788,42.441438" target="_blank" rel="noreferrer">2GIS</a>
