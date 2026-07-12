@@ -6,7 +6,7 @@
     <title>Тушоо той - приглашение</title>
     <meta
       name="description"
-      content="Приглашение на тушоо той. Дата, место, программа и контакты."
+      content="Приглашение на тушоо той. Дата, место, карта и контакты."
     />
     <style>
       :root {
@@ -280,8 +280,7 @@
       }
 
       .time-box,
-      .detail-card,
-      .program-row {
+      .detail-card {
         background: rgba(255, 255, 255, 0.62);
         border: 1px solid var(--line);
         box-shadow: var(--shadow);
@@ -302,8 +301,7 @@
       }
 
       .time-box:hover,
-      .detail-card:hover,
-      .program-row:hover {
+      .detail-card:hover {
         transform: translateY(-4px);
         border-color: rgba(185, 99, 61, 0.28);
         box-shadow: 0 28px 70px rgba(54, 42, 31, 0.2);
@@ -328,7 +326,7 @@
 
       .details-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 14px;
       }
 
@@ -358,40 +356,6 @@
 
       .detail-card p {
         margin-top: 10px;
-        color: var(--muted);
-        line-height: 1.5;
-      }
-
-      .program {
-        display: grid;
-        gap: 10px;
-      }
-
-      .program-row {
-        display: grid;
-        grid-template-columns: 112px 1fr;
-        gap: 18px;
-        align-items: start;
-        border-radius: 8px;
-        padding: 20px 22px;
-        transition:
-          transform 220ms ease,
-          box-shadow 220ms ease,
-          border-color 220ms ease;
-      }
-
-      .program-time {
-        color: var(--blue);
-        font-size: 22px;
-        font-weight: 900;
-      }
-
-      .program-row h3 {
-        font-size: 20px;
-      }
-
-      .program-row p {
-        margin-top: 5px;
         color: var(--muted);
         line-height: 1.5;
       }
@@ -590,10 +554,6 @@
           min-height: 98px;
         }
 
-        .program-row {
-          grid-template-columns: 1fr;
-          gap: 8px;
-        }
       }
     </style>
   </head>
@@ -604,7 +564,6 @@
           <a class="brand" href="#top">Тушоо той</a>
           <div class="nav-links">
             <a href="#details">Детали</a>
-            <a href="#program">Программа</a>
             <a href="#contacts">Контакты</a>
           </div>
         </div>
@@ -625,7 +584,6 @@
         </div>
         <div class="hero-actions">
           <a class="button primary" href="#details">Посмотреть детали</a>
-          <a class="button" href="https://2gis.kg/bishkek/geo/70030076701835419/72.075788,42.441438" target="_blank" rel="noreferrer">2GIS</a>
           <a class="button" href="tel:+77000000000">Позвонить</a>
         </div>
       </div>
@@ -669,6 +627,11 @@
               <h3>Нарядный</h3>
               <p>Светлые и теплые оттенки приветствуются.</p>
             </article>
+            <a class="detail-card" href="https://2gis.kg/bishkek/geo/70030076701835419/72.075788,42.441438" target="_blank" rel="noreferrer">
+              <div class="label">2GIS</div>
+              <h3>Карта</h3>
+              <p>Нажмите, чтобы открыть правильную локацию кафе “Фазенда”.</p>
+            </a>
           </div>
         </div>
       </section>
@@ -683,37 +646,6 @@
         </div>
       </section>
 
-      <section class="section" id="program" aria-labelledby="program-title">
-        <div class="wrap">
-          <div class="section-title">
-            <h2 id="program-title">Программа</h2>
-            <p>Короткий план вечера, чтобы гостям было удобно ориентироваться.</p>
-          </div>
-          <div class="program">
-            <article class="program-row">
-              <div class="program-time">17:00</div>
-              <div>
-                <h3>Встреча гостей</h3>
-                <p>Теплые приветствия, фото и первые поздравления.</p>
-              </div>
-            </article>
-            <article class="program-row">
-              <div class="program-time">18:00</div>
-              <div>
-                <h3>Обряд тушоо кесуу</h3>
-                <p>Главный момент праздника и благословение первого пути.</p>
-              </div>
-            </article>
-            <article class="program-row">
-              <div class="program-time">19:00</div>
-              <div>
-                <h3>Ужин и поздравления</h3>
-                <p>Праздничный дасторкон, музыка и семейные пожелания.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer" id="contacts">
@@ -724,7 +656,6 @@
           место для каждого гостя.
         </p>
         <div class="footer-actions">
-          <a class="button primary" href="https://2gis.kg/bishkek/geo/70030076701835419/72.075788,42.441438" target="_blank" rel="noreferrer">Открыть 2GIS</a>
           <a class="button" href="tel:+77000000000">+7 700 000 00 00</a>
         </div>
       </div>
@@ -760,7 +691,7 @@
       setInterval(updateCountdown, 1000);
 
       const revealItems = document.querySelectorAll(
-        ".section-title, .time-box, .detail-card, .story > *, .program-row, .footer h2, .footer p, .footer-actions",
+        ".section-title, .time-box, .detail-card, .story > *, .footer h2, .footer p, .footer-actions",
       );
 
       revealItems.forEach((item, index) => {
