@@ -219,8 +219,8 @@
     .nav{padding:12px 18px; gap:12px;}
     .brand{min-width:0;}
     .brand-mark{width:34px; height:34px; font-size:1rem;}
-    .brand-text{font-size:.98rem;}
-    .brand-text span{font-size:.58rem; max-width:160px;}
+    .brand-text{font-size:1rem; white-space:nowrap;}
+    .brand-text span{display:none;}
     .nav-right{gap:8px; margin-left:auto;}
     .nav-right .btn.gold{display:none;}
     .langswitch button{padding:6px 11px;}
@@ -315,8 +315,7 @@
     .wrap{padding:0 14px;}
     .nav{padding:10px 14px;}
     .brand-mark{width:32px; height:32px;}
-    .brand-text{font-size:.9rem;}
-    .brand-text span{display:none;}
+    .brand-text{font-size:.92rem;}
     .langswitch{font-size:.72rem;}
     .langswitch button{padding:5px 9px;}
     .hero{padding-top:26px;}
