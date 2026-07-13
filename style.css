@@ -195,18 +195,80 @@
   .testi .name{margin-top:14px; font-weight:700; color:var(--green-dark); font-style:normal;}
 
   /* ---------- CONTACT ---------- */
-  .contact{background:var(--green); color:var(--paper); border-radius:24px; margin:0 24px; overflow:hidden;}
-  .contact .wrap{max-width:1160px;}
-  .contact-inner{display:grid; grid-template-columns:1fr 1fr; gap:40px; padding:52px 40px; align-items:center;}
-  .contact h2{color:#fff;}
-  .contact p{color:#DCE7DD;}
-  .contact-methods{display:flex; flex-direction:column; gap:14px; margin-top:22px;}
-  .contact-methods a{
-    display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff; font-weight:600;
-    background:rgba(255,255,255,.08); padding:13px 18px; border-radius:12px; transition:background .15s ease;
+  .contact{
+    background:
+      radial-gradient(circle at 18% 20%, rgba(231,210,165,.22), transparent 34%),
+      linear-gradient(135deg, #203D25 0%, var(--green) 52%, #24482A 100%);
+    color:var(--paper);
+    border-radius:24px;
+    margin:0 24px;
+    overflow:hidden;
+    border:1px solid rgba(231,210,165,.28);
+    position:relative;
   }
-  .contact-methods a:hover{background:rgba(255,255,255,.18); transform:translateX(4px);}
-  .contact-note{font-size:.8rem; color:#B9CBBB; margin-top:18px;}
+  .contact::before{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(255,253,246,.12);
+    border-radius:18px;
+    pointer-events:none;
+  }
+  .contact .wrap{max-width:1160px;}
+  .contact-inner{display:grid; grid-template-columns:1fr minmax(320px,.82fr); gap:36px; padding:46px; align-items:center; position:relative; z-index:1;}
+  .contact h2{color:#fff;}
+  .contact p{color:#E3EBDD;}
+  .contact-methods{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:0;
+    background:rgba(255,253,246,.10);
+    border:1px solid rgba(255,253,246,.16);
+    border-radius:18px;
+    padding:14px;
+    backdrop-filter:blur(8px);
+  }
+  .contact-methods a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:700;
+    background:rgba(255,253,246,.12);
+    padding:12px 14px;
+    border-radius:14px;
+    transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+    font-size:0;
+  }
+  .contact-methods a::before{
+    flex:0 0 42px;
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--paper-card);
+    color:var(--green);
+    box-shadow:0 8px 18px rgba(12,22,14,.16);
+    font-size:1rem;
+  }
+  .contact-methods a:nth-child(1)::before{content:"WA"; color:#128C4A;}
+  .contact-methods a:nth-child(2)::before{content:"TG"; color:#2584C6;}
+  .contact-methods a:nth-child(3)::before{content:"☎"; color:var(--gold);}
+  .contact-methods a span{font-size:.95rem; line-height:1.2; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .contact-methods a:hover{background:rgba(255,253,246,.20); transform:translateY(-2px); box-shadow:0 14px 26px rgba(12,22,14,.18);}
+  .contact-note{
+    display:inline-flex;
+    margin-top:18px;
+    padding:9px 12px;
+    border-radius:12px;
+    background:rgba(255,253,246,.10);
+    font-size:.82rem;
+    color:#D5E4D6;
+  }
 
   /* ---------- FOOTER ---------- */
   footer{padding:40px 24px 30px; text-align:center; color:var(--ink-soft); font-size:.82rem;}
@@ -294,9 +356,13 @@
     .link-more{min-height:36px;}
     .testi{padding:18px;}
     .contact{margin:0; border-radius:18px;}
-    .contact-inner{gap:22px; padding:30px 20px;}
+    .contact::before{inset:10px; border-radius:14px;}
+    .contact-inner{gap:22px; padding:28px 18px;}
     .contact h2{font-size:1.65rem; line-height:1.18;}
-    .contact-methods a{padding:14px 15px; min-height:48px;}
+    .contact-methods{padding:10px; border-radius:16px;}
+    .contact-methods a{padding:10px 12px; min-height:58px;}
+    .contact-methods a::before{width:38px; height:38px; font-size:.85rem;}
+    .contact-methods a span{font-size:.92rem;}
     footer{padding:32px 18px 82px;}
     .float-wa{width:52px; height:52px; right:16px; bottom:16px;}
     .modal-backdrop{padding:14px; align-items:flex-end;}
@@ -338,7 +404,7 @@
     .section-head h2{font-size:1.55rem;}
     .filters{margin-left:-14px; margin-right:-14px; padding-left:14px; padding-right:14px;}
     .card-body{padding:14px;}
-    .contact-inner{padding:26px 16px;}
+    .contact-inner{padding:24px 14px;}
     .contact h2{font-size:1.48rem;}
   }
 
