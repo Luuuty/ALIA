@@ -242,7 +242,7 @@
     transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
     font-size:0;
   }
-  .contact-methods a::before{
+  .contact-icon{
     flex:0 0 42px;
     width:42px;
     height:42px;
@@ -253,12 +253,13 @@
     background:var(--paper-card);
     color:var(--green);
     box-shadow:0 8px 18px rgba(12,22,14,.16);
-    font-size:1rem;
   }
-  .contact-methods a:nth-child(1)::before{content:"WA"; color:#128C4A;}
-  .contact-methods a:nth-child(2)::before{content:"TG"; color:#2584C6;}
-  .contact-methods a:nth-child(3)::before{content:"☎"; color:var(--gold);}
+  .contact-icon svg{width:23px; height:23px; fill:currentColor;}
+  .whatsapp-link .contact-icon{color:#128C4A;}
+  .telegram-link .contact-icon{color:#2584C6;}
+  .phone-link .contact-icon{color:var(--gold);}
   .contact-methods a span{font-size:.95rem; line-height:1.2; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .contact-methods a .contact-icon{font-size:0; overflow:visible;}
   .contact-methods a:hover{background:rgba(255,253,246,.20); transform:translateY(-2px); box-shadow:0 14px 26px rgba(12,22,14,.18);}
   .contact-note{
     display:inline-flex;
@@ -361,7 +362,8 @@
     .contact h2{font-size:1.65rem; line-height:1.18;}
     .contact-methods{padding:10px; border-radius:16px;}
     .contact-methods a{padding:10px 12px; min-height:58px;}
-    .contact-methods a::before{width:38px; height:38px; font-size:.85rem;}
+    .contact-icon{flex-basis:38px; width:38px; height:38px;}
+    .contact-icon svg{width:21px; height:21px;}
     .contact-methods a span{font-size:.92rem;}
     footer{padding:32px 18px 82px;}
     .float-wa{width:52px; height:52px; right:16px; bottom:16px;}
