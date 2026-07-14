@@ -100,6 +100,7 @@
   .hero-visual{
     position:relative; background:#667078; border-radius:24px; box-shadow:var(--shadow);
     padding:0; border:1px solid var(--tan); overflow:hidden;
+    animation:heroFloat 4.8s ease-in-out infinite;
   }
   .hero-visual::after{
     content:"";
@@ -452,10 +453,15 @@
     0%,100%{transform:translateY(0) scale(1); box-shadow:0 8px 20px rgba(0,0,0,.25);}
     50%{transform:translateY(-3px) scale(1.06); box-shadow:0 14px 28px rgba(37,211,102,.34);}
   }
+  @keyframes heroFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
+  }
 
   @media (prefers-reduced-motion: reduce){
     .reveal{opacity:1 !important; transform:none !important; transition:none !important; filter:none !important;}
     .float-wa,.hero-stats div.in-view,.leafline.in-view{animation:none !important;}
+    .hero-visual{animation:none !important;}
   }
 
   @media (max-width: 700px){
@@ -464,16 +470,17 @@
     .reveal.reveal-left,
     .reveal.reveal-right,
     .reveal.reveal-rotate{
-      transform:translateY(22px);
-      filter:blur(2px);
+      transform:translateY(42px);
+      filter:blur(4px);
     }
     .reveal.reveal-scale,
     .reveal.reveal-pop{
-      transform:translateY(14px) scale(.96);
+      transform:translateY(28px) scale(.9);
     }
     .reveal.in-view{
       transform:translateY(0) scale(1) rotate(0);
       filter:blur(0);
+      animation:mobileRevealPop .72s cubic-bezier(.2,1.1,.24,1) both;
     }
     .hero-visual,
     .card,
@@ -484,9 +491,21 @@
       transform-style:flat;
     }
     .float-wa{animation:waPulseMobile 3.2s ease-in-out infinite;}
+    .hero-visual{animation:heroFloatMobile 5.2s ease-in-out infinite;}
   }
 
   @keyframes waPulseMobile{
     0%,100%{transform:scale(1); box-shadow:0 8px 20px rgba(0,0,0,.22);}
     50%{transform:scale(1.04); box-shadow:0 12px 24px rgba(37,211,102,.30);}
+  }
+
+  @keyframes mobileRevealPop{
+    0%{opacity:0; transform:translateY(34px) scale(.94); filter:blur(4px);}
+    70%{opacity:1; transform:translateY(-3px) scale(1.01); filter:blur(0);}
+    100%{opacity:1; transform:translateY(0) scale(1); filter:blur(0);}
+  }
+
+  @keyframes heroFloatMobile{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-4px);}
   }
