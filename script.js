@@ -195,7 +195,7 @@ const i18n = {
   ctLead:{ru:'Напишите мне — подберу продукцию под ваш запрос, расскажу про программу приёма и оформлю заказ с доставкой.', ky:'Мага жазыңыз — сурооңузга жараша продукция тандап берем, кабыл алуу программасын түшүндүрөм жана жеткирүү менен буйрутма таризделейм.'},
   ctNote:{ru:'Работаю в Бишкеке и по всему Кыргызстану. Консультация бесплатная.', ky:'Бишкекте жана Кыргызстан боюнча иштейм. Консультация акысыз.'},
   ctWa:{ru:'Написать в WhatsApp', ky:'WhatsApp\'ка жазуу'},
-  ctTg:{ru:'Написать в Telegram', ky:'Telegram\'га жазуу'},
+  ctTg:{ru:'Написать в Instagram', ky:'Instagram\'га жазуу'},
   footText:{ru:'Официальный партнёр компании M-International · Бишкек, Кыргызстан', ky:'M-International компаниясынын расмий өнөктөшү · Бишкек, Кыргызстан'},
   modalComp:{ru:'Состав', ky:'Курамы'},
   modalBen:{ru:'Польза для здоровья', ky:'Ден соолукка пайдасы'},
@@ -315,7 +315,7 @@ const revealObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add('in-view');
-    }else{
+    }else if(!window.matchMedia('(max-width: 700px)').matches){
       entry.target.classList.remove('in-view');
     }
   });

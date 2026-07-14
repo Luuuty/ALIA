@@ -256,7 +256,7 @@
   }
   .contact-icon svg{width:23px; height:23px; fill:currentColor;}
   .whatsapp-link .contact-icon{color:#128C4A;}
-  .telegram-link .contact-icon{color:#2584C6;}
+  .instagram-link .contact-icon{color:#E4405F;}
   .phone-link .contact-icon{color:var(--gold);}
   .contact-methods a span{font-size:.95rem; line-height:1.2; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
   .contact-methods a .contact-icon{font-size:0; overflow:visible;}
@@ -460,8 +460,6 @@
 
   @media (max-width: 700px){
     html{overscroll-behavior-x:none;}
-    body{touch-action:pan-y;}
-    .filters{touch-action:pan-x pan-y;}
     .reveal,
     .reveal.reveal-left,
     .reveal.reveal-right,
