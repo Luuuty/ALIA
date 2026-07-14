@@ -77,7 +77,7 @@ const products = [
   },
   {
     id:'kordymax', category:'detox',
-    image:'https://m-internationall.ru/wp-content/uploads/2024/01/product-graphic.png',
+    image:'assets/products/kordymax.png',
     video:'assets/videos/kordymax.mp4',
     name:'KordyMAX',
     tag:{ru:'Кордицепс, энергия', ky:'Кордицепс, энергия'},
