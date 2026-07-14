@@ -114,6 +114,53 @@
     position:absolute; top:16px; right:18px; z-index:2; background:var(--gold); color:#fff;
     font-size:.75rem; font-weight:700; padding:7px 16px; border-radius:20px; box-shadow:var(--shadow);
   }
+  .before-after{
+    min-height:560px;
+    padding:22px;
+    background:linear-gradient(135deg, #f7f1df 0%, #fffdf6 42%, #ece4cc 100%);
+    position:relative;
+  }
+  .before-after figure{
+    margin:0;
+    position:absolute;
+    background:#fffdf6;
+    border:1px solid var(--tan);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 18px 42px rgba(30,46,32,.16);
+  }
+  .before-after img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    aspect-ratio:auto;
+    display:block;
+  }
+  .before-after figcaption{
+    position:absolute;
+    left:12px;
+    bottom:12px;
+    background:rgba(30,46,32,.88);
+    color:#fff;
+    border-radius:999px;
+    padding:6px 13px;
+    font-size:.78rem;
+    font-weight:700;
+  }
+  .before-card{
+    width:48%;
+    height:70%;
+    left:24px;
+    bottom:24px;
+  }
+  .after-card{
+    width:58%;
+    height:76%;
+    right:24px;
+    top:36px;
+    z-index:1;
+  }
+  .after-card figcaption{background:var(--gold);}
 
   .leafline{height:26px; margin:8px 0 0; background:repeating-linear-gradient(90deg, var(--tan) 0 26px, transparent 26px 40px); opacity:.5; mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); background-size:40px 26px;}
 
@@ -318,6 +365,9 @@
     .hero-visual{max-width:430px; width:100%; margin:6px auto 0; border-radius:18px;}
     .hero-visual img{max-height:480px; object-fit:cover; background:#667078;}
     .hero-visual .tag{right:14px; top:14px; max-width:calc(100% - 28px); white-space:normal; text-align:center;}
+    .before-after{min-height:520px; padding:18px;}
+    .before-card{left:18px; bottom:18px; width:50%; height:67%;}
+    .after-card{right:18px; top:42px; width:58%; height:72%;}
     .grid{grid-template-columns:repeat(2,1fr);}
     .testi-grid{grid-template-columns:1fr;}
     .contact-inner{grid-template-columns:1fr;}
@@ -418,6 +468,10 @@
     .hero-actions{margin-bottom:18px;}
     .hero-visual{padding:0;}
     .hero-visual img{max-height:340px; object-position:center top;}
+    .before-after{min-height:430px; padding:14px;}
+    .before-after figcaption{font-size:.7rem; padding:5px 11px; left:9px; bottom:9px;}
+    .before-card{left:14px; bottom:14px; width:50%; height:62%;}
+    .after-card{right:14px; top:38px; width:60%; height:68%;}
     .hero-stats div{padding:9px 6px; font-size:1.08rem;}
     .hero-stats small{font-size:.5rem;}
     .section-head h2{font-size:1.55rem;}
