@@ -6,7 +6,7 @@
 <title>M-International — Каталог продукции</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=hero-compare-slider">
+<link rel="stylesheet" href="style.css?v=hero-two-panels">
 </head>
 <body>
 
@@ -51,14 +51,14 @@
     <div class="hero-visual reveal reveal-right in-view" style="--delay:.15s">
       <span class="tag" data-i18n="heroTag">До / После</span>
       <div class="before-after">
-        <img class="before-photo" src="assets/hero-before.jpeg" alt="До">
-        <div class="after-photo">
+        <figure class="before-panel">
+          <img src="assets/hero-before.jpeg" alt="До">
+          <figcaption>До</figcaption>
+        </figure>
+        <figure class="after-panel">
           <img src="assets/hero-after.jpeg" alt="После">
-        </div>
-        <div class="compare-divider"><span>↔</span></div>
-        <div class="compare-label before-label">До</div>
-        <div class="compare-label after-label">После</div>
-        <input class="compare-range" type="range" min="18" max="82" value="58" aria-label="Сравнить до и после">
+          <figcaption>После</figcaption>
+        </figure>
       </div>
     </div>
   </div>
@@ -154,6 +154,6 @@
   </div>
 </div>
 
-<script src="script.js?v=hero-compare-slider"></script>
+<script src="script.js?v=hero-two-panels"></script>
 </body>
 </html>
