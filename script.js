@@ -341,6 +341,9 @@ const revealObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
       entry.target.classList.add('in-view');
+      if(window.matchMedia('(max-width: 700px)').matches){
+        revealObserver.unobserve(entry.target);
+      }
     }else if(!window.matchMedia('(max-width: 700px)').matches){
       entry.target.classList.remove('in-view');
     }
