@@ -317,6 +317,19 @@ renderFilters();
 renderGrid();
 renderTesti();
 
+/* ---------------- HERO BEFORE/AFTER SLIDER ---------------- */
+function initCompareSlider(){
+  const compare = document.querySelector('.before-after');
+  const range = document.querySelector('.compare-range');
+  if(!compare || !range) return;
+  const update = ()=>{
+    compare.style.setProperty('--split', `${range.value}%`);
+  };
+  range.addEventListener('input', update);
+  update();
+}
+initCompareSlider();
+
 /* ---------------- SCROLL REVEAL OBSERVER ---------------- */
 function prepareRevealAnimations(){
   document.querySelectorAll('.hero-stats div').forEach((el,i)=>{
