@@ -13,7 +13,7 @@ const categories = [
 const products = [
   {
     id:'greenmax', category:'detox',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/greenmax.jpg',
+    image:'assets/products/greenmax.jpg',
     video:'assets/videos/greenmax.mp4',
     name:'GreenMAX',
     tag:{ru:'Детокс, очищение кишечника', ky:'Детокс, ичегини тазалоо'},
@@ -29,7 +29,7 @@ const products = [
   },
   {
     id:'mimax', category:'immune',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/mimax-1.jpg',
+    image:'assets/products/mimax.jpg',
     video:'assets/videos/mimax.mp4',
     name:'MiMAX',
     tag:{ru:'Клеточное питание, омоложение', ky:'Клеткалык тамактануу, жашартуу'},
@@ -45,7 +45,7 @@ const products = [
   },
   {
     id:'blumax', category:'immune',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/blumax.jpg',
+    image:'assets/products/blumax.jpg',
     video:'assets/videos/blumax.mp4',
     name:'BluMAX',
     tag:{ru:'Иммунитет, витамин C', ky:'Иммунитет, витамин C'},
@@ -61,7 +61,7 @@ const products = [
   },
   {
     id:'nutrimax', category:'weight',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/nutrimax.jpg',
+    image:'assets/products/nutrimax.jpg',
     video:'assets/videos/nutrimax.mp4',
     name:'NutriMAX',
     tag:{ru:'Жиросжигание, контроль веса', ky:'Май жандыруу, салмакты көзөмөлдөө'},
@@ -93,7 +93,7 @@ const products = [
   },
   {
     id:'fleximax', category:'joints',
-    image:'https://m-internationall.ru/wp-content/uploads/2024/01/banner2-en.png',
+    image:'assets/products/fleximax.png',
     video:'assets/videos/fleximax.mp4',
     name:'FlexiMax',
     tag:{ru:'Суставы, кости, печень', ky:'Муундар, сөөктөр, боор'},
@@ -109,7 +109,7 @@ const products = [
   },
   {
     id:'machoman', category:'men',
-    image:'https://m-internationall.ru/wp-content/uploads/2024/01/product-1.png',
+    image:'assets/products/machoman.png',
     video:'assets/videos/machoman.mp4',
     name:'Machoman',
     tag:{ru:'Мужское сексуальное здоровье', ky:'Эркектердин жыныстык ден соолугу'},
@@ -125,7 +125,7 @@ const products = [
   },
   {
     id:'yekaterina', category:'women',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/photo_2022-10-12_20-52-03.jpg',
+    image:'assets/products/yekaterina.jpg',
     video:'assets/videos/yekaterina.mp4',
     name:'Ye-Katerina',
     tag:{ru:'Интим-гель для женщин', ky:'Аялдар үчүн интим-гель'},
@@ -141,7 +141,7 @@ const products = [
   },
   {
     id:'lamor', category:'face',
-    image:'https://m-internationall.ru/wp-content/uploads/2022/11/lamor-1.jpg',
+    image:'assets/products/lamor.jpg',
     video:'assets/videos/lamor.mp4',
     name:'L’amor',
     tag:{ru:'Маска-скраб для лица', ky:'Бет үчүн маска-скраб'},
@@ -157,7 +157,7 @@ const products = [
   },
   {
     id:'mi-serum', category:'face',
-    image:'assets/mi-serum.jpeg',
+    image:'assets/products/mi-serum.jpeg',
     video:'assets/videos/mi-serum.mp4',
     name:'Mi SERUM',
     tag:{ru:'Женьшеневая сыворотка, уход за кожей', ky:'Женьшень сывороткасы, териге кам көрүү'},
