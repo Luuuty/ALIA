@@ -273,15 +273,13 @@ function renderGrid(){
   const el = document.getElementById('grid');
   el.innerHTML = '';
   const list = products.filter(p => activeCat==='all' || p.category===activeCat);
-  const preferLocalPhotos = window.matchMedia('(max-width: 700px)').matches;
   list.forEach((p,i)=>{
     const card = document.createElement('div');
     const revealTypes = ['reveal-scale', 'reveal-left', 'reveal-right', 'reveal-pop'];
     card.className = `card reveal ${revealTypes[i % revealTypes.length]}`;
     card.style.setProperty('--delay', ((i%3)*0.08)+'s');
-    const imgSrc = preferLocalPhotos ? (p.fallbackImage || p.image) : p.image;
     card.innerHTML = `
-      <div class="card-img"><img src="${imgSrc}" data-fallback="${p.fallbackImage || p.image}" alt="${p.name}" loading="eager" decoding="async"></div>
+      <div class="card-img"><img src="${p.image}" data-fallback="${p.fallbackImage || p.image}" alt="${p.name}" loading="eager" decoding="async"></div>
       <div class="card-body">
         <p class="card-tag">${p.tag[lang]}</p>
         <h3>${p.name}</h3>
