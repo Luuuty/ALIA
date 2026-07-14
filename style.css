@@ -157,6 +157,21 @@
   .card-tag{font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--gold);}
   .card-body h3{font-size:1.25rem; margin-bottom:2px;}
   .card-desc{font-size:.88rem; color:var(--ink-soft); flex:1;}
+  .card-video{
+    margin-top:8px;
+    border:1px solid var(--gold-soft);
+    border-radius:12px;
+    overflow:hidden;
+    background:#121812;
+    box-shadow:0 8px 18px rgba(30,46,32,.10);
+  }
+  .card-video video{
+    width:100%;
+    aspect-ratio:16/9;
+    display:block;
+    object-fit:cover;
+    background:#121812;
+  }
   .card-foot{display:flex; justify-content:space-between; align-items:center; margin-top:10px;}
   .link-more{background:none; border:none; color:var(--green); font-weight:700; font-size:.86rem; cursor:pointer; padding:0; display:flex; align-items:center; gap:4px;}
   .link-more:hover{color:var(--green-dark); text-decoration:underline;}
@@ -355,6 +370,7 @@
       -webkit-box-orient:vertical;
       overflow:hidden;
     }
+    .card-video video{aspect-ratio:4/3;}
     .link-more{min-height:36px;}
     .testi{padding:18px;}
     .contact{margin:0; border-radius:18px;}
