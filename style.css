@@ -118,9 +118,9 @@
     padding:54px 22px 22px;
     background:linear-gradient(135deg, #f7f1df 0%, #fffdf6 48%, #ece4cc 100%);
     display:grid;
-    grid-template-columns:.78fr 1fr;
+    grid-template-columns:1fr .56fr;
     gap:14px;
-    align-items:stretch;
+    align-items:end;
   }
   .before-after figure{
     margin:0;
@@ -151,11 +151,11 @@
     font-weight:700;
   }
   .before-card{
-    height:390px;
-    align-self:end;
+    height:170px;
   }
   .after-card{
-    height:470px;
+    grid-column:1 / -1;
+    height:420px;
   }
   .after-card figcaption{background:var(--gold);}
 
@@ -362,9 +362,9 @@
     .hero-visual{max-width:430px; width:100%; margin:6px auto 0; border-radius:18px;}
     .hero-visual img{max-height:480px; object-fit:cover; background:#667078;}
     .hero-visual .tag{right:14px; top:14px; max-width:calc(100% - 28px); white-space:normal; text-align:center;}
-    .before-after{padding:52px 16px 16px; gap:12px;}
-    .before-card{height:330px;}
-    .after-card{height:410px;}
+    .before-after{padding:52px 16px 16px; grid-template-columns:1fr .58fr; gap:12px;}
+    .before-card{height:150px;}
+    .after-card{height:390px;}
     .grid{grid-template-columns:repeat(2,1fr);}
     .testi-grid{grid-template-columns:1fr;}
     .contact-inner{grid-template-columns:1fr;}
@@ -465,10 +465,10 @@
     .hero-actions{margin-bottom:18px;}
     .hero-visual{padding:0;}
     .hero-visual img{max-height:340px; object-position:center top;}
-    .before-after{padding:50px 12px 12px; grid-template-columns:1fr; gap:12px;}
+    .before-after{padding:50px 12px 12px; grid-template-columns:1fr .62fr; gap:10px;}
     .before-after figcaption{font-size:.7rem; padding:5px 11px; left:9px; bottom:9px;}
-    .before-card{height:280px; order:1;}
-    .after-card{height:330px; order:2;}
+    .before-card{height:132px;}
+    .after-card{height:300px;}
     .hero-stats div{padding:9px 6px; font-size:1.08rem;}
     .hero-stats small{font-size:.5rem;}
     .section-head h2{font-size:1.55rem;}
