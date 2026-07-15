@@ -6,7 +6,7 @@
 <title>M-International — Каталог продукции</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=hero-separate-photos">
+<link rel="stylesheet" href="style.css?v=reviews-marquee">
 </head>
 <body>
 
@@ -94,13 +94,102 @@
   </div>
 </section>
 
-<section id="reviews" style="background:var(--paper-card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow" data-i18n="revEyebrow">Отзывы</p>
-      <h2 data-i18n="revTitle">Что говорят клиенты</h2>
+<section id="reviews" class="reviews">
+  <div class="reviews-head reveal">
+    <span class="reviews-eyebrow" data-i18n="revEyebrow">Отзывы</span>
+    <h2 class="reviews-title" data-i18n="revTitle">Что говорят клиенты</h2>
+  </div>
+
+  <div class="marquee" data-marquee>
+    <div class="marquee-track" data-track>
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">А</div>
+          <div>
+            <div class="review-name">Айгуль К.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Заказывала детокс-программу — уже через неделю почувствовала лёгкость, ушла отёчность. Спасибо за подробную консультацию!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Б</div>
+          <div>
+            <div class="review-name">Бермет Т.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Продукция реально натуральная, есть халяль-сертификат. Доставили в тот же день по Бишкеку, очень удобно.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Н</div>
+          <div>
+            <div class="review-name">Нургуль А.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Брала программу для контроля веса. За месяц минус 4 кг без жёстких диет. Консультант всё объяснила по приёму.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Э</div>
+          <div>
+            <div class="review-name">Эльвира С.</div>
+            <div class="review-stars">★★★★☆</div>
+          </div>
+        </div>
+        <p class="review-text">Кожа стала заметно чище после курса. Немного дороговато, но качество того стоит.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Ж</div>
+          <div>
+            <div class="review-name">Жаныл М.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Иммунитет реально окреп, за зиму ни разу не болела. Буду заказывать ещё, уже рекомендовала подругам.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Д</div>
+          <div>
+            <div class="review-name">Динара Р.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Очень внимательный подход — подобрали программу именно под мой запрос, а не продали "что есть". Результат виден.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">К</div>
+          <div>
+            <div class="review-name">Курманжан О.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Заказывал для мамы, она в восторге — энергии стало больше, сон наладился. Спасибо за заботу и оперативность!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">С</div>
+          <div>
+            <div class="review-name">Салтанат Ж.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Пользуюсь линейкой уже полгода. Каждый продукт даёт заметный эффект, консультации всегда бесплатные и по делу.</p>
+      </article>
     </div>
-    <div class="testi-grid" id="testiGrid"></div>
   </div>
 </section>
 
@@ -154,6 +243,6 @@
   </div>
 </div>
 
-<script src="script.js?v=hero-separate-photos"></script>
+<script src="script.js?v=reviews-marquee"></script>
 </body>
 </html>

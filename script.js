@@ -285,6 +285,7 @@ function renderGrid(){
 
 function renderTesti(){
   const el = document.getElementById('testiGrid');
+  if(!el) return;
   el.innerHTML = '';
   testimonials.forEach((x,i)=>{
     const d = document.createElement('div');
@@ -293,6 +294,15 @@ function renderTesti(){
     d.innerHTML = `<p>«${x[lang].text}»</p><div class="name">— ${x[lang].name}</div>`;
     el.appendChild(d);
   });
+}
+
+function initReviewsMarquee(){
+  const track = document.querySelector('[data-track]');
+  if(!track || track.dataset.cloned === 'true') return;
+  Array.from(track.children).forEach(card=>{
+    track.appendChild(card.cloneNode(true));
+  });
+  track.dataset.cloned = 'true';
 }
 
 function openModal(id){
@@ -316,6 +326,7 @@ function closeModal(){
 renderFilters();
 renderGrid();
 renderTesti();
+initReviewsMarquee();
 
 /* ---------------- SCROLL REVEAL OBSERVER ---------------- */
 function prepareRevealAnimations(){

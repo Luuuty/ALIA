@@ -242,11 +242,97 @@
   .benefit-list li::before{content:"✓"; color:var(--green); font-weight:700;}
   .modal-actions{margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;}
 
-  /* ---------- TESTIMONIALS ---------- */
-  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
-  .testi{background:var(--paper-card); border:1px solid var(--tan); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow);}
-  .testi p{font-size:.92rem; color:var(--ink-soft); font-style:italic;}
-  .testi .name{margin-top:14px; font-weight:700; color:var(--green-dark); font-style:normal;}
+  /* ---------- REVIEWS MARQUEE ---------- */
+  .reviews{
+    padding:72px 0;
+    overflow:hidden;
+    background:var(--paper-card);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .reviews-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 40px;
+    padding:0 20px;
+  }
+  .reviews-eyebrow{
+    display:inline-block;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:8px;
+  }
+  .reviews-title{
+    font-size:clamp(24px,3.2vw,34px);
+    font-weight:700;
+    color:var(--green-dark);
+    margin:0;
+  }
+  .marquee{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .marquee-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:marquee-scroll 38s linear infinite;
+  }
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  .review-card{
+    flex:0 0 auto;
+    width:300px;
+    background:#fff;
+    border:1px solid var(--tan);
+    border-radius:16px;
+    padding:22px;
+    box-shadow:0 4px 14px rgba(0,0,0,.04);
+  }
+  .review-top{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .review-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--gold-soft), var(--gold));
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:16px;
+    flex-shrink:0;
+  }
+  .review-name{
+    font-weight:700;
+    font-size:14.5px;
+    color:var(--green-dark);
+  }
+  .review-stars{
+    color:#e0a940;
+    font-size:13px;
+    letter-spacing:1px;
+  }
+  .review-text{
+    font-size:14px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
 
   /* ---------- CONTACT ---------- */
   .contact{
@@ -359,7 +445,7 @@
     .separate-photos{padding:50px 14px 14px; gap:12px;}
     .separate-photos figure{min-height:390px;}
     .grid{grid-template-columns:repeat(2,1fr);}
-    .testi-grid{grid-template-columns:1fr;}
+    .review-card{width:270px;}
     .contact-inner{grid-template-columns:1fr;}
     nav.links{display:none;}
     .menu-toggle{display:block;}
@@ -412,7 +498,7 @@
     }
     .card-video video{aspect-ratio:4/3;}
     .link-more{min-height:36px;}
-    .testi{padding:18px;}
+    .review-card{width:250px; padding:18px;}
     .contact{margin:0; border-radius:18px;}
     .contact::before{inset:10px; border-radius:14px;}
     .contact-inner{gap:22px; padding:28px 18px;}
@@ -550,7 +636,7 @@
     }
     .hero-visual,
     .card,
-    .testi,
+    .review-card,
     .contact,
     .trust-item{
       backface-visibility:hidden;
