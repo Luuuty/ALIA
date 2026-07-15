@@ -328,6 +328,39 @@ renderGrid();
 renderTesti();
 initReviewsMarquee();
 
+/* ---------------- HERO BEFORE/AFTER FADE ---------------- */
+function initHeroCompare(){
+  const root = document.querySelector('[data-hero-compare]');
+  if(!root) return;
+  const photos = Array.from(root.querySelectorAll('.compare-photo'));
+  const dots = Array.from(root.querySelectorAll('.compare-dots span'));
+  const label = root.querySelector('[data-compare-label]');
+  if(photos.length < 2 || !label) return;
+
+  let active = 0;
+  let timerId;
+
+  const setActive = (index)=>{
+    active = index % photos.length;
+    photos.forEach((photo, i)=>photo.classList.toggle('active', i === active));
+    dots.forEach((dot, i)=>dot.classList.toggle('active', i === active));
+    label.textContent = photos[active].dataset.label || photos[active].alt || '';
+  };
+  const start = ()=>{
+    stop();
+    timerId = setInterval(()=>setActive(active + 1), 2500);
+  };
+  const stop = ()=>{
+    if(timerId) clearInterval(timerId);
+  };
+
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  setActive(0);
+  start();
+}
+initHeroCompare();
+
 /* ---------------- SCROLL REVEAL OBSERVER ---------------- */
 function prepareRevealAnimations(){
   document.querySelectorAll('.hero-stats div').forEach((el,i)=>{
