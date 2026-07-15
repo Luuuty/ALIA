@@ -348,7 +348,7 @@ function initHeroCompare(){
   };
   const start = ()=>{
     stop();
-    timerId = setInterval(()=>setActive(active + 1), 1500);
+    timerId = setInterval(()=>setActive(active + 1), 2000);
   };
   const stop = ()=>{
     if(timerId) clearInterval(timerId);
